@@ -66,12 +66,17 @@ Infinite recursion does not happen when `if` is used because `if` is a special f
 
 **Give concise mathematical definitions for the functions computed by the procedures f, g, and h for positive integer values of n.**
 
-(define (f n) (A 0 n))   -> _f(n) = 2n_
+(define (f n) (A 0 n))
 
-(define (g n) (A 1 n))   -> _g(n) = 2^n_
+(define (g n) (A 1 n))
 
-(define (h n) (A 2 n))   -> _h(n) = 2^2^2 ...(n-1 times)_
+(define (h n) (A 2 n))
 
+```
+f(n) = 2n
+g(n) = 2^n
+h(n) = 2^2^2 ...(n-1 times)
+```
 
 ## 1.34
 
@@ -92,15 +97,18 @@ The reason is that `(f f)` via
 
 ## 1.38
 [Euler's expansion](euler-exp.scm)
+
 ## 1.41
 [Procedure double](double.scm)
 
 `(((double (double double)) inc) 5)` will return 21.
-## 1.42 
 
+## 1.42 
 [x -> f(g(x))](compose.scm)
+
 ## 1.43
 [nth repeated application of f](repeated.scm)
+
 ## Functional set
 [Functional set](FunctionalSet.hs)
 
