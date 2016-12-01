@@ -24,21 +24,21 @@ Therefore
 ```
 
       
-Predicate `(= 0 0)` is evaluated first in `if` special form. Therefore we get:
+For `if` special form, predicate `(= 0 0)` is evaluated first. Therefore we get:
  ```
   (if true
         0
        (p)))
   ```
        
- The consequent expression which equals to 0 of `if` special form is returned.
+The consequent expression which equals to `0` of `if` special form is returned.
 
 
 ## 1.6
 
 **What happens when Alyssa attempts to use this to compute square roots? Explain.**
 
-Interpreter will return ";Aborting!: maximum recursion depth exceeded".
+Interpreter will return _Aborting!: maximum recursion depth exceeded._
 Scheme interpreter uses applicative-order evaluation, so in case of
 
 ```
@@ -82,7 +82,7 @@ h(n) = 2^2^2 ...(n-1 times)
 
 **What happens if we (perversely) ask the interpreter to evaluate the combination (f f)? Explain.**
 
-"The object 2 is not applicable." is return by the interpreter.
+Interpreter returns "The object 2 is not applicable."
 The reason is that `(f f)` via
 
 ```
@@ -93,7 +93,7 @@ The reason is that `(f f)` via
  expands to
  `(f 2)`
   
- which in turn expands to `(2 2)`
+ which in turn expands to `(2 2)`. You cannot apply a primitive.
 
 ## 1.38
 [Euler's expansion](euler-exp.scm)

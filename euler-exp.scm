@@ -1,9 +1,9 @@
 (define (cont-frac n d k)
-  (define (cont-frac-iter n d i)
-	  (if (= (- k i) 1)
-	      (/ (n i) (d i))
-	      (/ (n i) (+ (d i) (cont-frac-iter n d (+ i 1))))))
-  (cont-frac-iter n d 0.0))
+  (define (cont-frac-iter i sum)
+	  (if (= i 0)
+	      sum
+	      (cont-frac-iter (- i 1) (/ (n i) (+ (d i) sum)) )))
+  (cont-frac-iter k 0.0))
 
 
 (cont-frac (lambda (i) 1.0)
@@ -18,3 +18,6 @@
 		              1))
               k)
     2.0))
+
+
+(euler 6)
